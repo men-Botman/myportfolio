@@ -817,32 +817,40 @@
         font-size: 10px;
     }
 }
-.cv-download {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px 14px;
-    border: 1px solid #00e5c3;
-    border-radius: 12px;
-    background: linear-gradient(115deg, #7455ff, #5b70ff);
-    color: white;
-    font-size: 12px;
-    font-weight: 800;
-    text-decoration: none;
-    white-space: nowrap;
-    transition: 0.25s;
+.project-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+  flex-wrap: wrap;
 }
 
-.cv-download:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 24px #7c5cff40;
+.project-link {
+  display: inline-block;
+  padding: 8px 14px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
 }
 
-@media (max-width: 700px) {
-    .cv-download {
-        padding: 8px;
-        font-size: 10px;
-    }
+.btn-primary {
+  background-color: #2563eb;
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background-color: #1d4ed8;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  border: 1px solid #d1d5db;
+  color: #374151;
+}
+
+.btn-secondary:hover {
+  background-color: #f3f4f6;
 }
 </style>
 
@@ -1097,37 +1105,49 @@
         <p class="section-description reveal" data-i18n="projectsIntro">
           Bu bo‘limga o‘zing yaratgan haqiqiy loyihalarni va ularning GitHub havolalarini qo‘shishing mumkin.
         </p>
+<div class="projects-grid">
+  <!-- 1-loyiha: Hotel booking app -->
+  <article class="panel project-card reveal">
+    <div class="project-cover"><div class="cover-symbol">&lt;/&gt;</div></div>
+    <div class="project-body">
+      <h3 data-i18n="projectOne">Hotel booking app</h3>
+      <p data-i18n="projectOneDesc">Mehmonxona xonalarini band qilish va xizmatlarni boshqarish uchun mo‘ljallangan veb-ilova.</p>
+      <div class="project-tech"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+      <div class="project-actions">
+        <a class="project-link btn-primary" href="https://mehmonxona-iota.vercel.app/" target="_blank" rel="noopener noreferrer" data-i18n="viewProject">Loyihani ko‘rish ↗</a>
+        <a class="project-link btn-secondary" href="https://github.com/men-Botman/Mehmonxona" target="_blank" rel="noopener noreferrer" data-i18n="viewGithub">GitHub ↗</a>
+      </div>
+    </div>
+  </article>
 
-        <div class="projects-grid">
-          <article class="panel project-card reveal">
-            <div class="project-cover"><div class="cover-symbol">&lt;/&gt;</div></div>
-            <div class="project-body">
-              <h3 data-i18n="projectOne">Shaxsiy Portfolio</h3>
-              <p data-i18n="projectOneDesc">Shaxsiy ma’lumotlar, ko‘nikmalar va aloqa ma’lumotlari uchun zamonaviy portfolio sayti.</p>
-              <div class="project-tech"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
-              <a class="project-link" href="https://github.com/men-Botman" target="_blank" rel="noopener noreferrer" data-i18n="viewGithub">GitHub profilini ko‘r ↗</a>
-            </div>
-          </article>
+  <!-- 2-loyiha: SRM / Sistema (ish.uzz) -->
+  <article class="panel project-card reveal">
+    <div class="project-cover"><div class="cover-symbol">UI/UX</div></div>
+    <div class="project-body">
+      <h3 data-i18n="projectTwo">Ish.uzz (Ish qidirish platformasi)</h3>
+      <p data-i18n="projectTwoDesc">Ish izchilar va ish beruvchilar uchun qulay interfeysga ega platforma loyihasi.</p>
+      <div class="project-tech"><span>CSS</span><span>JavaScript</span><span>Responsive</span></div>
+      <div class="project-actions">
+        <a class="project-link btn-primary" href="https://ish-uzz.vercel.app/" target="_blank" rel="noopener noreferrer" data-i18n="viewProject">Loyihani ko‘rish ↗</a>
+        <a class="project-link btn-secondary" href="https://github.com/men-Botman/ish.uzz" target="_blank" rel="noopener noreferrer" data-i18n="viewGithub">GitHub ↗</a>
+      </div>
+    </div>
+  </article>
 
-          <article class="panel project-card reveal">
-            <div class="project-cover"><div class="cover-symbol">UI/UX</div></div>
-            <div class="project-body">
-              <h3 data-i18n="projectTwo">Interaktiv web-dizayn</h3>
-              <p data-i18n="projectTwoDesc">Animatsiyalar, responsive dizayn va qulay foydalanuvchi interfeysi uchun loyiha g‘oyasi.</p>
-              <div class="project-tech"><span>CSS</span><span>JavaScript</span><span>Responsive</span></div>
-              <a class="project-link" href="https://github.com/men-Botman" target="_blank" rel="noopener noreferrer" data-i18n="viewGithub">GitHub profilini ko‘r ↗</a>
-            </div>
-          </article>
-
-          <article class="panel project-card reveal">
-            <div class="project-cover"><div class="cover-symbol">⚛</div></div>
-            <div class="project-body">
-              <h3 data-i18n="projectThree">React loyihasi</h3>
-              <p data-i18n="projectThreeDesc">React va zamonaviy frontend texnologiyalarini mashq qilish uchun loyiha kartasi.</p>
-              <div class="project-tech"><span>React</span><span>Next.js</span><span>JavaScript</span></div>
-              <a class="project-link" href="https://github.com/men-Botman" target="_blank" rel="noopener noreferrer" data-i18n="viewGithub">GitHub profilini ko‘r ↗</a>
-            </div>
-          </article>
+  <!-- 3-loyiha: Personal Portfolio (akhmalov_websayt) -->
+  <article class="panel project-card reveal">
+    <div class="project-cover"><div class="cover-symbol">⚛</div></div>
+    <div class="project-body">
+      <h3 data-i18n="projectThree">Personal Portfolio</h3>
+      <p data-i18n="projectThreeDesc">Shaxsiy ma’lumotlar, ko‘nikmalar va aloqa ma’lumotlari uchun zamonaviy portfolio sayti.</p>
+      <div class="project-tech"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+      <div class="project-actions">
+        <a class="project-link btn-primary" href="https://akhmalov-websayt.vercel.app/" target="_blank" rel="noopener noreferrer" data-i18n="viewProject">Loyihani ko‘rish ↗</a>
+        <a class="project-link btn-secondary" href="https://github.com/men-Botman/akhmalov_websayt" target="_blank" rel="noopener noreferrer" data-i18n="viewGithub">GitHub ↗</a>
+      </div>
+    </div>
+  </article>
+</div>
         </div>
         <p class="form-note" data-i18n="projectNote">Ushbu kartalar namunaviy. Haqiqiy loyihalaringni qo‘shib, havolalarini yangila.</p>
       </div>
